@@ -22,11 +22,11 @@ RUN     yum -y update; yum clean all; \
 # Install requirements.
 RUN     yum -y update \
         && yum -y install \
-         sudo \
-         git \
-         which \
-         hostname \
-         python3-pip \
+        sudo \
+        git \
+        which \
+        hostname \
+        python3-pip \
         && yum clean all
 
 # Install Ansible via Pip.
