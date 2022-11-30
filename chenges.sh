@@ -25,7 +25,6 @@ do
 	# file has a .yaml extention
     ext=${file:(-5)}
     [[ $ext != ".yaml" ]] && continue
-    ./validate_db_deploy_config.py $file
     err=$?
     if [[ $err != "0" ]]
     then
