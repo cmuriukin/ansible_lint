@@ -1,5 +1,4 @@
 #!/bin/bash
-
 errno=0
 while read -d $'\0' -r file; do
     # file has a .yaml extention

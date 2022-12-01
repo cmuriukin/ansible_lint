@@ -23,6 +23,7 @@ RUN     yum -y update; yum clean all; \
 RUN     yum -y update \
         && yum -y install \
         sudo \
+	java-11-openjdk-devel \
         git \
         which \
         hostname \
@@ -38,6 +39,8 @@ RUN     sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 # Install Ansible inventory file.
 RUN     mkdir -p /etc/ansible
 RUN     echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+
+CMD	/bin/bash
 
 
 # # Base Image

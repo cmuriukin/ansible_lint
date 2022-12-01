@@ -1,5 +1,5 @@
 #!/bin/bash
-ansible-lint test.yaml
+ansible-lint nginx.yaml
 if [ "$?" != "0"]; 
 then
     echo "bad"

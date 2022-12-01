@@ -1,5 +1,7 @@
 pipeline {
-   agent any
+   agent {
+        docker { image 'rhel-node:v1.0.0' }
+    }
 
    stages {
       stage('Clone WebApp') {
